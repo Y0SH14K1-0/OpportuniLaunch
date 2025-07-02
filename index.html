@@ -15,68 +15,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-layout">
-                <!-- Left side - Map -->
-                <div class="hero-map">
-                    <svg class="latam-map" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.9"/>
-                                <stop offset="50%" style="stop-color:#ff8e35;stop-opacity:0.9"/>
-                                <stop offset="100%" style="stop-color:#ffd23f;stop-opacity:0.9"/>
-                            </linearGradient>
-                            <filter id="glow">
-                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                                <feMerge> 
-                                    <feMergeNode in="coloredBlur"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                            <linearGradient id="markerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
-                                <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:1"/>
-                            </linearGradient>
-                        </defs>
-                        
-                        <!-- Main LATAM landmass with detailed shape -->
-                        <path d="M180 80 Q200 70 220 85 L240 100 Q260 120 250 140 L270 160 Q290 180 280 200 L300 220 Q320 240 310 260 L330 280 Q350 300 340 320 L360 340 Q380 360 370 380 L390 400 Q400 420 380 440 L360 460 Q340 480 320 470 L300 450 Q280 430 260 440 L240 420 Q220 400 200 410 L180 390 Q160 370 140 380 L120 360 Q100 340 110 320 L90 300 Q70 280 80 260 L60 240 Q40 220 50 200 L30 180 Q10 160 20 140 L40 120 Q60 100 80 110 L100 90 Q120 70 140 80 L160 75 Q170 78 180 80 Z" fill="url(#mapGradient)" stroke="#ffffff" stroke-width="3" filter="url(#glow)"/>
-                        
-                        <!-- Mexico region highlight -->
-                        <circle cx="140" cy="140" r="25" fill="#ff6b35" opacity="0.6" stroke="#fff" stroke-width="2"/>
-                        
-                        <!-- Colombia region highlight -->
-                        <circle cx="220" cy="240" r="20" fill="#ff6b35" opacity="0.6" stroke="#fff" stroke-width="2"/>
-                        
-                        <!-- Mexico marker with enhanced animation -->
-                        <circle cx="140" cy="140" r="12" fill="url(#markerGradient)" stroke="#fff" stroke-width="3" filter="url(#glow)" class="country-marker mexico-marker">
-                            <animate attributeName="r" values="12;18;12" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <text x="140" y="120" fill="#fff" font-family="Poppins" font-size="16" font-weight="700" text-anchor="middle">México</text>
-                        
-                        <!-- Colombia marker with enhanced animation -->
-                        <circle cx="220" cy="240" r="12" fill="url(#markerGradient)" stroke="#fff" stroke-width="3" filter="url(#glow)" class="country-marker colombia-marker">
-                            <animate attributeName="r" values="12;18;12" dur="3s" repeatCount="indefinite" begin="1.5s"/>
-                        </circle>
-                        <text x="220" y="220" fill="#fff" font-family="Poppins" font-size="16" font-weight="700" text-anchor="middle">Colombia</text>
-                        
-                        <!-- Decorative connection lines -->
-                        <line x1="140" y1="140" x2="220" y2="240" stroke="#fff" stroke-width="2" opacity="0.4" stroke-dasharray="5,5">
-                            <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
-                        </line>
-                        
-                        <!-- Additional decorative elements -->
-                        <circle cx="350" cy="150" r="4" fill="#ffd23f" opacity="0.8">
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="280" cy="400" r="6" fill="#ff6b9d" opacity="0.6">
-                            <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="120" cy="300" r="3" fill="#ff8e35" opacity="0.9">
-                            <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                    </svg>
-                </div>
-                
-                <!-- Right side - Content -->
+                <!-- Left side - Content -->
                 <div class="hero-content">
                     <h1 class="hero-brand">Opportuni</h1>
                     
@@ -95,6 +34,25 @@
                             <i class="fab fa-whatsapp"></i>
                             <span>Unirme a la comunidad Colombia</span>
                         </a>
+                    </div>
+                </div>
+                
+                <!-- Right side - Map -->
+                <div class="hero-map">
+                    <div class="map-container">
+                        <img src="https://png.pngtree.com/png-clipart/20230807/original/pngtree-an-orangetoned-vector-illustration-depicting-the-map-of-latin-america-vector-picture-image_10062364.png" alt="Mapa de Latinoamérica" class="latam-map-image">
+                        
+                        <!-- Overlay highlights for Mexico and Colombia -->
+                        <div class="map-overlay">
+                            <div class="country-highlight mexico-highlight">
+                                <div class="pulse-marker"></div>
+                                <span class="country-label">México</span>
+                            </div>
+                            <div class="country-highlight colombia-highlight">
+                                <div class="pulse-marker"></div>
+                                <span class="country-label">Colombia</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
