@@ -1,0 +1,51 @@
+Build a responsive landing page in HTML and CSS (desktop version) for a platform called "Opportuni". 
+
+🎯 Goal:
+The page should connect with Latin American youth (ages 18–29) and explain clearly what Opportuni is, how it works, and how to join a WhatsApp community per country. It must be visually attractive, modern, and usable.
+
+🎨 Design style:
+- Digital illustrated visual style (inspiration: Shake Shack México)
+- Gradient color palette: pink–orange–yellow
+- Sans-serif font (like Poppins)
+- Clean layout, techy and friendly look
+- Desktop first, but responsive
+- Visual emphasis on illustrations, not just plain text
+
+📦 Structure:
+1. Hero section:
+- Background with illustrated map of LATAM
+- Highlight markers on Mexico 🇲🇽 and Colombia 🇨🇴
+- Title: “Conectamos a jóvenes talentosos con oportunidades educativas y profesionales.”
+- Subtitle: “El talento está en todas partes, pero las oportunidades no siempre. Por eso creamos este grupo: para jóvenes que quieren más y no sabían por dónde empezar. Acá te llega lo que allá afuera nadie te manda.”
+- Horizontal buttons:
+  - Join Mexico community → https://chat.whatsapp.com/Ia6hJNGLtc5L3tafScz1pY
+  - Join Colombia community → https://chat.whatsapp.com/HlBAILleobdEvPRWoZO4Rw
+
+2. What is Opportuni? (manifesto style block)
+- “La mayoría de las oportunidades no se pierden, simplemente no llegan. Por eso creamos Opportuni, una comunidad donde compartimos becas, vacantes, retos y programas que sí sirven, sin filtros ni rodeos. Si eres joven y estás buscando crecer, aquí encuentras el dato que cambia el juego.”
+
+3. How does it work? (3 steps with icons/illustrations)
+- Join the general WhatsApp group
+- Pick your sub-community: Engineering, Business, Creative, Social, or Web3
+- Share. Grow. Connect.
+
+4. Testimonials (4 cards in grid layout)
+- “Encontré mi primera práctica gracias a este grupo.” — Fátima, 20, Guadalajara
+- “Todo llega clarito, sin spam.” — Mateo, 23, Bogotá
+- “Es una joya. Becas, retos y convocatorias útiles.” — Juan, 24, Medellín
+- “Me llegó una vacante que no vi en ningún otro lado.” — Camila, 21, CDMX
+
+5. Footer:
+- Phrase: “Hecho con 💛 en LATAM para jóvenes que no se conforman.”
+- Repeat community buttons
+- Social icons:
+  - Instagram: https://www.instagram.com/opportuni_mx
+  - LinkedIn: (leave placeholder)
+
+📌 Technical:
+- Responsive
+- Fixed hero section with clear buttons
+- Clickable links
+- Editable text
+- Grid layout for testimonials
+- Exportable HTML/CSS or publishable immediately
