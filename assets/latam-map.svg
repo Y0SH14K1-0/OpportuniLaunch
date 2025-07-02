@@ -1,0 +1,49 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+    <!-- Simplified LATAM map illustration -->
+    <defs>
+        <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.8"/>
+            <stop offset="50%" style="stop-color:#ff8e35;stop-opacity:0.8"/>
+            <stop offset="100%" style="stop-color:#ffd23f;stop-opacity:0.8"/>
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge> 
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Main LATAM landmass -->
+    <path d="M150 50 Q180 40 200 60 L220 80 Q240 100 230 120 L250 140 Q270 160 260 180 L280 200 Q300 220 290 240 L310 260 Q330 280 320 300 L340 320 Q360 340 350 360 L370 380 Q380 400 360 420 L340 440 Q320 460 300 450 L280 430 Q260 410 240 420 L220 400 Q200 380 180 390 L160 370 Q140 350 120 360 L100 340 Q80 320 90 300 L70 280 Q50 260 60 240 L40 220 Q20 200 30 180 L10 160 Q0 140 20 120 L40 100 Q60 80 80 90 L100 70 Q120 50 150 50 Z" fill="url(#mapGradient)" stroke="#ffffff" stroke-width="2" filter="url(#glow)"/>
+    
+    <!-- Mexico region highlight -->
+    <path d="M80 90 Q100 80 120 95 L140 110 Q150 125 135 140 L115 155 Q95 170 75 155 L55 140 Q35 125 45 110 L65 95 Q80 90 80 90 Z" fill="#ff6b35" opacity="0.9" stroke="#fff" stroke-width="1"/>
+    
+    <!-- Colombia region highlight -->
+    <path d="M160 180 Q180 170 200 185 L220 200 Q230 215 215 230 L195 245 Q175 260 155 245 L135 230 Q115 215 125 200 L145 185 Q160 180 160 180 Z" fill="#ff6b35" opacity="0.9" stroke="#fff" stroke-width="1"/>
+    
+    <!-- Mexico marker with animation -->
+    <circle cx="120" cy="120" r="8" fill="#ff6b35" stroke="#fff" stroke-width="2" filter="url(#glow)">
+        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Colombia marker with animation -->
+    <circle cx="180" cy="200" r="8" fill="#ff6b35" stroke="#fff" stroke-width="2" filter="url(#glow)">
+        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1s"/>
+        <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    
+    <!-- Decorative elements -->
+    <circle cx="300" cy="100" r="3" fill="#ffd23f" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="350" r="4" fill="#ff6b9d" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="250" r="2" fill="#ff8e35" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+</svg>

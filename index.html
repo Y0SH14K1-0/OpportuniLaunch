@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportuni - Conectamos jóvenes talentosos con oportunidades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="map-container">
+                <svg class="latam-map" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Simplified LATAM map -->
+                    <path d="M150 50 Q180 40 200 60 L220 80 Q240 100 230 120 L250 140 Q270 160 260 180 L280 200 Q300 220 290 240 L310 260 Q330 280 320 300 L340 320 Q360 340 350 360 L370 380 Q380 400 360 420 L340 440 Q320 460 300 450 L280 430 Q260 410 240 420 L220 400 Q200 380 180 390 L160 370 Q140 350 120 360 L100 340 Q80 320 90 300 L70 280 Q50 260 60 240 L40 220 Q20 200 30 180 L10 160 Q0 140 20 120 L40 100 Q60 80 80 90 L100 70 Q120 50 150 50 Z" fill="url(#mapGradient)" stroke="#fff" stroke-width="2"/>
+                    
+                    <!-- Mexico marker -->
+                    <circle cx="120" cy="120" r="8" fill="#ff6b35" class="country-marker mexico-marker">
+                        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="135" y="125" fill="#fff" font-family="Poppins" font-size="12" font-weight="600">🇲🇽 México</text>
+                    
+                    <!-- Colombia marker -->
+                    <circle cx="180" cy="200" r="8" fill="#ff6b35" class="country-marker colombia-marker">
+                        <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1s"/>
+                    </circle>
+                    <text x="195" y="205" fill="#fff" font-family="Poppins" font-size="12" font-weight="600">🇨🇴 Colombia</text>
+                    
+                    <defs>
+                        <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.8"/>
+                            <stop offset="50%" style="stop-color:#ff8e35;stop-opacity:0.8"/>
+                            <stop offset="100%" style="stop-color:#ffd23f;stop-opacity:0.8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Conectamos a jóvenes talentosos con oportunidades educativas y profesionales.</h1>
+                <p class="hero-subtitle">El talento está en todas partes, pero las oportunidades no siempre. Por eso creamos este grupo: para jóvenes que quieren más y no sabían por dónde empezar. Acá te llega lo que allá afuera nadie te manda.</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://chat.whatsapp.com/Ia6hJNGLtc5L3tafScz1pY" target="_blank" class="cta-button mexico-button">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Únete a la comunidad de México</span>
+                    </a>
+                    <a href="https://chat.whatsapp.com/HlBAILleobdEvPRWoZO4Rw" target="_blank" class="cta-button colombia-button">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Únete a la comunidad de Colombia</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Opportuni Section -->
+    <section class="manifesto">
+        <div class="container">
+            <div class="manifesto-content">
+                <h2>¿Qué es Opportuni?</h2>
+                <p>La mayoría de las oportunidades no se pierden, simplemente no llegan. Por eso creamos Opportuni, una comunidad donde compartimos becas, vacantes, retos y programas que sí sirven, sin filtros ni rodeos. Si eres joven y estás buscando crecer, aquí encuentras el dato que cambia el juego.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>¿Cómo funciona?</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>1. Únete al grupo de WhatsApp</h3>
+                    <p>Escoge tu país y conéctate con la comunidad</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>2. Escoge tu subcomunidad</h3>
+                    <p>Engineering, Business, Creative, Social, o Web3</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>3. Comparte. Crece. Conecta.</h3>
+                    <p>Recibe oportunidades y ayuda a otros a crecer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Lo que dicen nuestros miembros</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Encontré mi primera práctica gracias a este grupo."</p>
+                    <div class="author">
+                        <strong>— Fátima, 20, Guadalajara</strong>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Todo llega clarito, sin spam."</p>
+                    <div class="author">
+                        <strong>— Mateo, 23, Bogotá</strong>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Es una joya. Becas, retos y convocatorias útiles."</p>
+                    <div class="author">
+                        <strong>— Juan, 24, Medellín</strong>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Me llegó una vacante que no vi en ningún otro lado."</p>
+                    <div class="author">
+                        <strong>— Camila, 21, CDMX</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-tagline">Hecho con 💛 en LATAM para jóvenes que no se conforman.</p>
+                
+                <div class="footer-buttons">
+                    <a href="https://chat.whatsapp.com/Ia6hJNGLtc5L3tafScz1pY" target="_blank" class="footer-cta mexico-button">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>México</span>
+                    </a>
+                    <a href="https://chat.whatsapp.com/HlBAILleobdEvPRWoZO4Rw" target="_blank" class="footer-cta colombia-button">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Colombia</span>
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.instagram.com/opportuni_mx" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
