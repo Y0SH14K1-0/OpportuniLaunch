@@ -65,21 +65,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 60px 40px;
 }
 
 .map-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 650px;
     height: auto;
 }
 
 .latam-map-image {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
-    border-radius: 20px;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .map-overlay {
@@ -100,13 +101,13 @@ body {
 }
 
 .mexico-highlight {
-    top: 22%;
-    left: 25%;
+    top: 18%;
+    left: 22%;
 }
 
 .colombia-highlight {
-    top: 50%;
-    left: 38%;
+    top: 45%;
+    left: 40%;
 }
 
 .pulse-marker {
@@ -501,6 +502,14 @@ body {
     .hero-subtitle {
         font-size: 1.1rem;
     }
+    
+    .map-container {
+        max-width: 550px;
+    }
+    
+    .latam-map-image {
+        transform: scale(1.05);
+    }
 }
 
 @media (max-width: 768px) {
@@ -525,14 +534,22 @@ body {
         padding: 20px;
     }
     
+    .map-container {
+        max-width: 400px;
+    }
+    
+    .latam-map-image {
+        transform: scale(1);
+    }
+    
     .mexico-highlight {
-        top: 20%;
-        left: 15%;
+        top: 16%;
+        left: 20%;
     }
     
     .colombia-highlight {
-        top: 40%;
-        left: 30%;
+        top: 42%;
+        left: 38%;
     }
     
     .hero-brand {
