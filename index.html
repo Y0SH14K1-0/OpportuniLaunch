@@ -62,6 +62,80 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Lo que dicen nuestros miembros</h2>
+            <div class="testimonials-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carousel-track">
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>"Encontré mi primera práctica gracias a este grupo."</p>
+                                <div class="author">
+                                    <strong>— Fátima, 20, Guadalajara</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>"Todo llega clarito, sin spam."</p>
+                                <div class="author">
+                                    <strong>— Mateo, 23, Bogotá</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>"Es una joya. Becas, retos y convocatorias útiles."</p>
+                                <div class="author">
+                                    <strong>— Juan, 24, Medellín</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>"Me llegó una vacante que no vi en ningún otro lado."</p>
+                                <div class="author">
+                                    <strong>— Camila, 21, CDMX</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-button prev" id="carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-button next" id="carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="carousel-indicators" id="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- What is Opportuni Section -->
     <section class="manifesto">
         <div class="container">
@@ -104,53 +178,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>Lo que dicen nuestros miembros</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p>"Encontré mi primera práctica gracias a este grupo."</p>
-                    <div class="author">
-                        <strong>— Fátima, 20, Guadalajara</strong>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p>"Todo llega clarito, sin spam."</p>
-                    <div class="author">
-                        <strong>— Mateo, 23, Bogotá</strong>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p>"Es una joya. Becas, retos y convocatorias útiles."</p>
-                    <div class="author">
-                        <strong>— Juan, 24, Medellín</strong>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p>"Me llegó una vacante que no vi en ningún otro lado."</p>
-                    <div class="author">
-                        <strong>— Camila, 21, CDMX</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -192,5 +220,91 @@
             <span>Unirme a Colombia</span>
         </a>
     </div>
+
+    <script>
+        // Testimonials Carousel Functionality
+        class TestimonialsCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 4;
+                this.track = document.getElementById('carousel-track');
+                this.prevButton = document.getElementById('carousel-prev');
+                this.nextButton = document.getElementById('carousel-next');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.slides = document.querySelectorAll('.testimonial-slide');
+                
+                this.init();
+            }
+            
+            init() {
+                // Event listeners for navigation buttons
+                this.prevButton.addEventListener('click', () => this.previousSlide());
+                this.nextButton.addEventListener('click', () => this.nextSlide());
+                
+                // Event listeners for indicators
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+                
+                // Auto-advance carousel every 6 seconds
+                this.startAutoplay();
+                
+                // Pause autoplay on hover
+                const carousel = document.querySelector('.carousel-container');
+                carousel.addEventListener('mouseenter', () => this.stopAutoplay());
+                carousel.addEventListener('mouseleave', () => this.startAutoplay());
+                
+                // Initial setup
+                this.updateSlide();
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateSlide();
+            }
+            
+            previousSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateSlide();
+            }
+            
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateSlide();
+            }
+            
+            updateSlide() {
+                // Update track position
+                const translateX = -this.currentSlide * 25; // 25% for each slide
+                this.track.style.transform = `translateX(${translateX}%)`;
+                
+                // Update active states
+                this.slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === this.currentSlide);
+                });
+                
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+            
+            startAutoplay() {
+                this.autoplayInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 6000);
+            }
+            
+            stopAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                }
+            }
+        }
+        
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new TestimonialsCarousel();
+        });
+    </script>
 </body>
 </html>
