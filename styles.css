@@ -496,6 +496,69 @@ body {
     font-size: 1.3rem;
 }
 
+/* Floating Action Buttons */
+.floating-cta-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 1000;
+}
+
+.floating-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: var(--white);
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.1);
+    min-width: 220px;
+    justify-content: center;
+    white-space: nowrap;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.floating-cta:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2), 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.floating-cta i {
+    font-size: 1.2rem;
+    color: #25d366;
+}
+
+.floating-cta.mexico-floating:hover {
+    background: linear-gradient(135deg, #ff6b9d, #ff8e35);
+    color: var(--white);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.floating-cta.colombia-floating:hover {
+    background: linear-gradient(135deg, #ff8e35, #ffd23f);
+    color: var(--darker);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero-layout {
@@ -625,6 +688,19 @@ body {
     .footer-cta {
         min-width: 200px;
     }
+
+    /* Floating buttons mobile adjustments */
+    .floating-cta-container {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+    }
+
+    .floating-cta {
+        min-width: 180px;
+        padding: 14px 20px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -679,6 +755,19 @@ body {
     
     .step-icon i {
         font-size: 1.5rem;
+    }
+
+    /* Floating buttons very small screen adjustments */
+    .floating-cta-container {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    .floating-cta {
+        min-width: 160px;
+        padding: 12px 18px;
+        font-size: 0.85rem;
     }
 }
 
@@ -750,6 +839,7 @@ html {
 /* Focus styles for accessibility */
 .cta-button:focus,
 .footer-cta:focus,
+.floating-cta:focus,
 .social-link:focus {
     outline: 2px solid var(--primary-yellow);
     outline-offset: 2px;
