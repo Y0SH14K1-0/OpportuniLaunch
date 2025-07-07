@@ -165,7 +165,6 @@ body {
 .latam-map-image {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
@@ -245,7 +244,10 @@ body {
 .hero-brand {
     font-size: 4.5rem;
     font-weight: 800;
-    color: var(--dark);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-align: center;
     line-height: 1;
     letter-spacing: -0.02em;
@@ -336,14 +338,11 @@ body {
 .manifesto h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark);
     margin-bottom: var(--element-spacing);
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* Fallback for accessibility */
-    text-shadow: 0 0 0 var(--dark);
 }
 
 .manifesto p {
@@ -363,14 +362,11 @@ body {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark);
     margin-bottom: 60px;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* Fallback for accessibility */
-    text-shadow: 0 0 0 var(--dark);
 }
 
 .steps-grid {
@@ -434,14 +430,11 @@ body {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark);
     margin-bottom: 60px;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* Fallback for accessibility */
-    text-shadow: 0 0 0 var(--dark);
 }
 
 /* Testimonials Carousel */
