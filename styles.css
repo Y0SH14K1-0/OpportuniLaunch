@@ -31,15 +31,19 @@
 .nav-brand {
     display: flex;
     align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .brand-text {
     font-size: 1.8rem;
     font-weight: 800;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--dark);
     text-decoration: none;
 }
 
@@ -775,6 +779,14 @@ body {
         transform: rotate(45deg) translate(-5px, -6px);
     }
     
+    .brand-logo {
+        max-height: 35px;
+    }
+    
+    .brand-text {
+        font-size: 1.5rem;
+    }
+    
     .hero-brand {
         font-size: 3.5rem;
     }
@@ -996,6 +1008,15 @@ body {
     
     .carousel-button.next {
         right: 5px;
+    }
+
+    /* Brand logo adjustments for very small screens */
+    .brand-logo {
+        max-height: 30px;
+    }
+    
+    .brand-text {
+        font-size: 1.3rem;
     }
 
     /* Floating buttons very small screen adjustments */
