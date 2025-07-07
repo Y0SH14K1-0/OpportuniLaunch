@@ -187,13 +187,13 @@ body {
 }
 
 .mexico-highlight {
-    top: 12%;
-    left: 5%;
+    top: 20%;
+    left: 10%;
 }
 
 .colombia-highlight {
-    top: 28%;
-    left: 32%;
+    top: 30%;
+    left: 35%;
 }
 
 .pulse-marker {
@@ -829,13 +829,13 @@ body {
     }
     
     .mexico-highlight {
-        top: 10%;
-        left: 3%;
+        top: 20%;
+        left: 10%;
     }
     
     .colombia-highlight {
-        top: 26%;
-        left: 30%;
+        top: 30%;
+        left: 35%;
     }
     
     .pulse-marker {
