@@ -457,6 +457,7 @@ body {
 .testimonials-carousel {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 80px; /* Add padding to create space for arrows */
 }
 
 .carousel-container {
@@ -510,11 +511,11 @@ body {
 }
 
 .carousel-button.prev {
-    left: 20px;
+    left: -70px; /* Position outside the carousel container */
 }
 
 .carousel-button.next {
-    right: 20px;
+    right: -70px; /* Position outside the carousel container */
 }
 
 .carousel-button i {
@@ -922,6 +923,7 @@ body {
     /* Testimonials carousel mobile adjustments */
     .testimonials-carousel {
         max-width: 100%;
+        padding: 0 60px; /* Reduced padding for mobile */
     }
     
     .carousel-button {
@@ -930,11 +932,11 @@ body {
     }
     
     .carousel-button.prev {
-        left: 10px;
+        left: -50px; /* Position outside on mobile */
     }
     
     .carousel-button.next {
-        right: 10px;
+        right: -50px; /* Position outside on mobile */
     }
     
     .carousel-button i {
@@ -1016,6 +1018,19 @@ body {
     
     .step-icon i {
         font-size: 1.5rem;
+    }
+    
+    /* Very small screens - adjust carousel arrows */
+    .testimonials-carousel {
+        padding: 0 50px;
+    }
+    
+    .carousel-button.prev {
+        left: -45px;
+    }
+    
+    .carousel-button.next {
+        right: -45px;
     }
 
     /* Testimonials carousel very small screen adjustments */
