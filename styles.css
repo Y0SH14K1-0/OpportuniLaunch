@@ -308,7 +308,7 @@ body {
 
 .cta-button i {
     font-size: 1.3rem;
-    color: #25d366;
+    color: var(--white);
 }
 
 .mexico-button {
@@ -708,7 +708,7 @@ body {
 
 .floating-cta i {
     font-size: 1.2rem;
-    color: #25d366;
+    color: var(--white);
 }
 
 .floating-cta.mexico-floating {
