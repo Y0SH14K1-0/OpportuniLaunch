@@ -412,6 +412,44 @@
                 }
             }
         }
+
+        // Floating CTA Visibility Manager
+        class FloatingCTAManager {
+            constructor() {
+                this.floatingContainer = document.querySelector('.floating-cta-container');
+                this.heroSection = document.getElementById('inicio');
+                this.init();
+            }
+            
+            init() {
+                // Check visibility on page load
+                this.updateVisibility();
+                
+                // Update visibility on scroll
+                window.addEventListener('scroll', () => this.updateVisibility());
+            }
+            
+            updateVisibility() {
+                if (!this.heroSection || !this.floatingContainer) return;
+                
+                const heroRect = this.heroSection.getBoundingClientRect();
+                const heroBottom = heroRect.bottom;
+                
+                // Show buttons when hero section is no longer in view (when bottom is above viewport)
+                if (heroBottom <= 0) {
+                    this.floatingContainer.classList.add('visible');
+                } else {
+                    this.floatingContainer.classList.remove('visible');
+                }
+            }
+        }
+
+        // Initialize all components when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            new TestimonialsCarousel();
+            new NavigationManager();
+            new FloatingCTAManager();
+        });
     </script>
 </body>
 </html>
