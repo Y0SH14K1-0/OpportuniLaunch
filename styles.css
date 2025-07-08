@@ -288,14 +288,14 @@ body {
     align-items: center;
     gap: 12px;
     padding: 18px 36px;
-    background: var(--primary-yellow);
-    color: var(--dark);
+    background: var(--primary-gradient);
+    color: var(--white);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(255, 210, 63, 0.3);
+    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.3);
     min-width: 260px;
     justify-content: center;
     white-space: nowrap;
@@ -312,13 +312,13 @@ body {
 }
 
 .mexico-button {
-    background: var(--primary-pink) !important;
+    background: var(--primary-gradient) !important;
     color: var(--white) !important;
     box-shadow: 0 6px 20px rgba(255, 107, 157, 0.3);
 }
 
 .mexico-button:hover {
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-orange)) !important;
+    background: var(--primary-gradient) !important;
     color: var(--white) !important;
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     transform: translateY(-2px);
@@ -326,17 +326,17 @@ body {
 }
 
 .colombia-button {
-    background: var(--primary-yellow) !important;
-    color: var(--dark) !important;
-    box-shadow: 0 6px 20px rgba(255, 210, 63, 0.3);
+    background: var(--primary-gradient) !important;
+    color: var(--white) !important;
+    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.3);
 }
 
 .colombia-button:hover {
-    background: linear-gradient(135deg, var(--primary-orange), var(--primary-yellow)) !important;
-    color: var(--dark) !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    background: var(--primary-gradient) !important;
+    color: var(--white) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 210, 63, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
 }
 
 /* Manifesto Section */
@@ -687,14 +687,14 @@ body {
     align-items: center;
     gap: 12px;
     padding: 16px 24px;
-    background: var(--primary-yellow);
-    color: var(--dark);
+    background: var(--primary-gradient);
+    color: var(--white);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(255, 210, 63, 0.3), 0 4px 10px rgba(255, 210, 63, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3), 0 4px 10px rgba(255, 107, 157, 0.2);
     min-width: 220px;
     justify-content: center;
     white-space: nowrap;
@@ -712,13 +712,13 @@ body {
 }
 
 .floating-cta.mexico-floating {
-    background: var(--primary-pink) !important;
+    background: var(--primary-gradient) !important;
     color: var(--white) !important;
     box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3), 0 4px 10px rgba(255, 107, 157, 0.2);
 }
 
 .floating-cta.mexico-floating:hover {
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-orange)) !important;
+    background: var(--primary-gradient) !important;
     color: var(--white) !important;
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     transform: translateY(-3px) scale(1.02);
@@ -726,17 +726,17 @@ body {
 }
 
 .floating-cta.colombia-floating {
-    background: var(--primary-yellow) !important;
-    color: var(--dark) !important;
-    box-shadow: 0 8px 25px rgba(255, 210, 63, 0.3), 0 4px 10px rgba(255, 210, 63, 0.2);
+    background: var(--primary-gradient) !important;
+    color: var(--white) !important;
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3), 0 4px 10px rgba(255, 107, 157, 0.2);
 }
 
 .floating-cta.colombia-floating:hover {
-    background: linear-gradient(135deg, var(--primary-orange), var(--primary-yellow)) !important;
-    color: var(--dark) !important;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    background: var(--primary-gradient) !important;
+    color: var(--white) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 35px rgba(255, 210, 63, 0.4), 0 6px 15px rgba(255, 210, 63, 0.3);
+    box-shadow: 0 12px 35px rgba(255, 107, 157, 0.4), 0 6px 15px rgba(255, 107, 157, 0.3);
 }
 
 @keyframes fadeInUp {
