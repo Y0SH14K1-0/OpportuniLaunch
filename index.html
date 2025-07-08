@@ -96,11 +96,9 @@
                                 <div class="quote-icon">
                                     <i class="fas fa-quote-left"></i>
                                 </div>
-                                <p>"Gracias a un evento organizado por Opportuni junto a Stellar LATAM, descubrí el ecosistema blockchain y fui seleccionada como becaria para Casa Builder México 2025. Estaré una semana en CDMX —con todo cubierto— participando en talleres y mentorías junto a jóvenes de toda América Latina. ¡Una experiencia que jamás habría imaginado encontrar... y me llegó directo al WhatsApp!"
-</p>
+                                <p>"Por Opportuni me enteré de Casa Builder con Stellar y… ¡me dieron la beca! Una semana en CDMX llena de talleres y comunidad. Increíble."</p>
                                 <div class="author">
-                                    <strong>— Martha Lagunas
-</strong>
+                                    <strong>— Martha</strong>
                                 </div>
                             </div>
                         </div>
@@ -110,8 +108,7 @@
                                 <div class="quote-icon">
                                     <i class="fas fa-quote-left"></i>
                                 </div>
-                                <p>"Vi la convocatoria para las Google Business Internships en el grupo de WhatsApp de Opportuni, apliqué… ¡y quedé! Fue una experiencia que marcó un antes y un después en mi vida. Todavía recuerdo perfecto que la descubrí gracias a esta comunidad. Opportuni fue la puerta a una oportunidad que cambió mi rumbo."
-</p>
+                                <p>"Apliqué a la internship de Google porque la vi en el grupo de WhatsApp de Opportuni. Quedé. Y sí, me cambió la vida."</p>
                                 <div class="author">
                                     <strong>— Lilian</strong>
                                 </div>
@@ -123,9 +120,9 @@
                                 <div class="quote-icon">
                                     <i class="fas fa-quote-left"></i>
                                 </div>
-                                <p>"Es una joya. Becas, retos y convocatorias útiles."</p>
+                                <p>"Vi una beca para hacer voluntariado en Colombia y dije: ¿por qué no? Me fui todo pagado, conocí gente de mil lugares. Gracias, Opportuni."</p>
                                 <div class="author">
-                                    <strong>— Juan, 24, Medellín</strong>
+                                    <strong>— Sofía</strong>
                                 </div>
                             </div>
                         </div>
@@ -135,9 +132,21 @@
                                 <div class="quote-icon">
                                     <i class="fas fa-quote-left"></i>
                                 </div>
-                                <p>"Me llegó una vacante que no vi en ningún otro lado."</p>
+                                <p>"Jamás pensé trabajar en Unilever tan pronto, pero vi la vacante en Opportuni, apliqué y entré. Me llegó justo cuando más lo necesitaba."</p>
                                 <div class="author">
-                                    <strong>— Camila, 21, CDMX</strong>
+                                    <strong>— Daniel</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>"Gracias a Opportuni descubrí una beca del 100% para estudiar en el Tec de Monterrey. Hoy soy financiero y todo empezó con un mensaje en el grupo."</p>
+                                <div class="author">
+                                    <strong>— Alexander</strong>
                                 </div>
                             </div>
                         </div>
@@ -156,6 +165,7 @@
                     <span class="indicator" data-slide="1"></span>
                     <span class="indicator" data-slide="2"></span>
                     <span class="indicator" data-slide="3"></span>
+                    <span class="indicator" data-slide="4"></span>
                 </div>
             </div>
         </div>
@@ -243,7 +253,7 @@
         class TestimonialsCarousel {
             constructor() {
                 this.currentSlide = 0;
-                this.totalSlides = 4;
+                this.totalSlides = 5;
                 this.track = document.getElementById('carousel-track');
                 this.prevButton = document.getElementById('carousel-prev');
                 this.nextButton = document.getElementById('carousel-next');
@@ -292,7 +302,7 @@
             
             updateSlide() {
                 // Update track position
-                const translateX = -this.currentSlide * 25; // 25% for each slide
+                const translateX = -this.currentSlide * 20; // 20% for each slide
                 this.track.style.transform = `translateX(${translateX}%)`;
                 
                 // Update active states
@@ -318,11 +328,7 @@
             }
         }
         
-        // Initialize carousel when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            new TestimonialsCarousel();
-            new NavigationMenu();
-        });
+
 
         // Navigation Menu Functionality
         class NavigationMenu {
@@ -447,7 +453,7 @@
         // Initialize all components when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             new TestimonialsCarousel();
-            new NavigationManager();
+            new NavigationMenu();
             new FloatingCTAManager();
         });
     </script>

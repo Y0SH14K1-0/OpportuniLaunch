@@ -471,11 +471,11 @@ body {
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease;
-    width: 400%; /* 4 slides × 100% */
+    width: 500%; /* 5 slides × 100% */
 }
 
 .testimonial-slide {
-    width: 25%; /* 100% ÷ 4 slides */
+    width: 20%; /* 100% ÷ 5 slides */
     flex-shrink: 0;
     padding: 20px;
     opacity: 0;
