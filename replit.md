@@ -72,10 +72,13 @@ No user data is collected or processed on the website itself.
 ## Deployment Strategy
 
 ### Current Setup
+- Custom Python HTTP server with health check endpoint
 - Static file hosting compatible
 - No server-side processing required
 - No database requirements
 - CDN-friendly for global content delivery
+- Deployment-ready with proper port binding (0.0.0.0:5000)
+- Health check endpoint available at `/health` and `/healthz`
 
 ### Recommended Hosting Platforms
 1. **Replit**: Direct deployment from development environment
@@ -96,4 +99,5 @@ Preferred communication style: Simple, everyday language.
 ## Changelog
 
 Changelog:
+- July 08, 2025. Fixed deployment issues by creating custom Python server with health check endpoint
 - July 02, 2025. Initial setup
