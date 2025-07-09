@@ -1094,3 +1094,38 @@ html {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Map Count Bubbles */
+.map-count {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.92);
+    color: #2d3748;
+    padding: 6px 14px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    animation: popIn 0.8s ease-out;
+    white-space: nowrap;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.map-count.mexico {
+    top: 16%;
+    left: 12%;
+}
+
+.map-count.colombia {
+    top: 32%;
+    left: 38%;
+}
