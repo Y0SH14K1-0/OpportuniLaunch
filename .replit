@@ -35,3 +35,6 @@ externalPort = 3000
 [deployment]
 deploymentTarget = "static"
 publicDir = "."
+
+[agent]
+expertMode = true
